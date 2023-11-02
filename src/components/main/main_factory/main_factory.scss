@@ -1,0 +1,125 @@
+.main_factory {
+  position: relative;
+  z-index: 2;
+  margin-top: -30px;
+}
+.main_factory__wrapper {
+  background: radial-gradient(95.1% 93.44% at 59.7% 110.33%, #93B1EF 8.75%, #2863DF 100%);
+  box-shadow: 0px -17px 45px 0px rgba(30, 72, 150, 0.20);
+  margin-top: -30px;
+  position: sticky;
+  height: 100vh;
+  top: 0;
+  border-radius: 15px 15px 0 0;
+  overflow: hidden;
+
+  @media ($tablet) {
+    padding: 83px 0 0;
+    border-radius: 15px 15px 0 0;
+  }
+  @media ($tablet) {
+    height: auto;
+  }
+
+  .container {
+    height: 100%;
+  }
+}
+.main_factory__content {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+
+  @media ($tablet) {
+    flex-direction: column;
+  }
+}
+.main_factory__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 565px;
+  margin-right: 60px;
+
+  @media ($tablet) {
+    max-width: none;
+    margin-right: 0;
+  }
+}
+.main_factory__title.h2_title {
+  font-size: 4.7rem;
+  line-height: 1.27;
+  color: #ffffff;
+
+  @media ($tablet3) {
+    font-size: 4rem;
+    line-height: 1.11;
+  }
+}
+.main_factory__text {
+  margin-top: 35px;
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.5;
+
+  @media ($tablet3) {
+    font-size: 1.6rem;
+    line-height: normal;
+  }
+}
+.main_factory__btn {
+  margin-top: 40px;
+  width: max-content;
+  @media ($tablet3) {
+    margin-top: 36px;
+  }
+}
+.main_factory__right {
+  margin-right: -100px;
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  width: 793px;
+
+  @media ($desktopSuperBig) {
+    margin-right: 0;
+    width: 50%;
+    flex: 0 0 auto;
+  }
+  @media ($tablet) {
+    width: 100%;
+    max-width: 500px;
+    margin: 84px auto 57px;
+    flex: 1 1 auto;
+  }
+}
+.main_factory__img {
+  width: 100%;
+  position: absolute;
+  padding: 100px 0;
+  top: 0;
+  left: 0;
+
+  @media ($tablet) {
+    padding: 0;
+    position: relative;
+  }
+
+  img {
+    width: 100%;
+
+    &.this--mobile {
+      display: none;
+    }
+
+    @media ($tablet) {
+      &.this--mobile {
+        display: block;
+      }
+      &.this--desktop {
+        display: none;
+      }
+    }
+  }
+}
